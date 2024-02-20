@@ -40,17 +40,12 @@ const makeTitle = title
       description="ZirconTech Agile Development Services"
       canonical={canonicalURL}
 
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `ZirconTech Agile Development Services`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Astroship Homepage Screenshot",
-        },
-      }}
+      <meta property="og:title" content=Agile Development Services>
+      <meta property="og:site_name" content=ZirconTech>
+      <meta property="og:url" content=https://agile.zircon.tech/>
+      <meta property="og:description" content=Elevate your product development with a partner that understands the need for flexibility, speed, and efficiency. >
+      <meta property="og:type" content=website>
+      <meta property="og:image" content=https://agile.zircon.tech/_astro/hero-source.65f181b2_Z1Hfb8m.svg>
     />
   <googleanalytics />
   </head>
