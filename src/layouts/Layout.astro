@@ -11,7 +11,7 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = const resolvedImageWithDomain = new URL(
+const resolvedImageWithDomain = new URL(
   "../assets/hero.png",
   Astro.site
 ).toString();
