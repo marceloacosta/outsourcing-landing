@@ -4,7 +4,7 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import googleanalytics from "@components/googleanalytics.astro";
-
+import opengraph from "assets/opengraph.jpg";
 
 
 
@@ -17,7 +17,7 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = "../../public/opengraph.jpg";
+const resolvedImageWithDomain = {opengraph};
 
 const { title } = Astro.props;
 
