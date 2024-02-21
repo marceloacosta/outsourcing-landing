@@ -5,6 +5,7 @@ import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import googleanalytics from "@components/googleanalytics.astro";
 import opengraph from "assets/opengraph.jpg";
+import ContactForm from "@components/contactform.astro";
 
 
 
@@ -52,6 +53,8 @@ const makeTitle = title
   <body>
     <Navbar />
     <slot />
+    <ContactForm />
+
     <Footer />
     <style is:global>
       /* Improve Page speed */
