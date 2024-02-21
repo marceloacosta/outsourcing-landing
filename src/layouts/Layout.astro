@@ -3,13 +3,6 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
-import googleanalytics from "@components/googleanalytics.astro";
-import opengraph from "assets/opengraph.jpg";
-
-
-
-
-
 
 export interface Props {
   title: string;
@@ -17,13 +10,16 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = {opengraph};
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "ZirconTech"
-  : "ZirconTech";
+  : "Agile and Product Development Services";
 ---
 
 <!DOCTYPE html>
@@ -31,23 +27,31 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
-  ¡
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="ZirconTech Agile Development Services"
+      description="Agile Development Services by ZirconTech."
       canonical={canonicalURL}
-
-      <meta property="og:title" content=Agile Development Services>
-      <meta property="og:site_name" content=ZirconTech>
-      <meta property="og:url" content=https://agile.zircon.tech/>
-      <meta property="og:description" content=Elevate your product development with a partner that understands the need for flexibility, speed, and efficiency. >
-      <meta property="og:type" content=website>
-      <meta property="og:image" content=https://9247ced2.rocketcdn.me/wp-content/uploads/2024/02/banking-transactions-1.png.webp>
+      twitter={{
+        creator: "@surjithctly",
+        site: "@web3templates",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Agile Development Services by ZirconTech.`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Agile Development Services by ZirconTech.",
+        },
+      }}
     />
-  <googleanalytics />
   </head>
   <body>
     <Navbar />
