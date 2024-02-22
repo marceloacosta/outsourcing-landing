@@ -5,6 +5,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://cloud.zircon.tech",
+  site: "https://development.zircon.tech",
   integrations: [tailwind(), mdx(), sitemap()],
 });

@@ -19,7 +19,7 @@ const { title } = Astro.props;
 
 const makeTitle = title
   ? title + " | " + "ZirconTech"
-  : "Cloud Solutions and Consultancy";
+  : "Custom Web and Application Development";
 ---
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Cloud Solutions and Consultancy by ZirconTech."
+      description="Custom Web and Application Development"
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",
@@ -44,11 +44,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Cloud Solutions and Consultancy by ZirconTech.`,
+          title: `Custom Web and Application Development`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Cloud Solutions and Consultancy by ZirconTech.",
+          alt: "Custom Web and Application Development",
         },
       }}
     />
