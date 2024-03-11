@@ -108,6 +108,14 @@ import Button from "./ui/button.astro";
         if (response.status == 200) {
           result.classList.add("text-green-500");
           result.innerHTML = json.message;
+
+
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            'event': 'formularioenviado',
+            'formularioID': 'formoutsourcing'
+          });
+
         } else {
           console.log(response);
           result.classList.add("text-red-500");
